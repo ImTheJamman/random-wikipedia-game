@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Wikipedia Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .category {
+            margin: 10px;
+            padding: 10px;
+            background-color: lightblue;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+        .rarity {
+            font-weight: bold;
+            font-size: 24px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Wikipedia Game</h1>
+    <div>
+        <button class="category" onclick="getRandomItem('animals')">Animals</button>
+        <button class="category" onclick="getRandomItem('people')">People</button>
+        <button class="category" onclick="getRandomItem('objects')">Objects</button>
+        <button class="category" onclick="getRandomItem('weapons')">Weapons</button>
+        <button class="category" onclick="getRandomItem('movies')">Movies</button>
+        <button class="category" onclick="getRandomItem('tvshows')">TV Shows</button>
+    </div>
+    <div id="result">
+        <h2 id="item-title"></h2>
+        <img id="item-image" src="" alt="" />
+        <p id="item-rarity" class="rarity"></p>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
